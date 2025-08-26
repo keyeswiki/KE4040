@@ -17,41 +17,7 @@ Arduino是一种开源电子原型平台，旨在为开发者和初学者提供�
 
 ## 3. 测试程序  
 
-```cpp  
-#include "Waveshare_BMP388.h"  
-
-void setup() {  
-    // put your setup code here, to run once:  
-    bool bRet;  
-    PRESS_EN_SENSOR_TYPY enPressureType;  
-
-    Serial.begin(115200);  
-    pressSensorInit(&enPressureType);  
-
-    if (PRESS_EN_SENSOR_TYPY_BMP388 == enPressureType) {  
-        Serial.println("Pressure sensor is BMP388");  
-    } else {  
-        Serial.println("Pressure sensor NULL");  
-    }  
-
-    Serial.println("/-------------------------------------------------------------/");  
-    delay(1000);  
-}  
-
-void loop() {  
-    // put your main code here, to run repeatedly:  
-    int32_t s32PressureVal = 0, s32TemperatureVal = 0, s32AltitudeVal = 0;  
-    pressSensorDataGet(&s32TemperatureVal, &s32PressureVal, &s32AltitudeVal);  
-
-    Serial.print("Pressure : ");   
-    Serial.print((float)s32PressureVal / 100);  
-    Serial.print(" Altitude : ");   
-    Serial.print((float)s32AltitudeVal / 100);  
-    Serial.print(" Temperature : ");   
-    Serial.print((float)s32TemperatureVal / 100);  
-    Serial.println();  
-}  
-```  
+- 下载代码：[Arduino](./Arduino.7z)
 
 ## 4. 实验结果  
 
