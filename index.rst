@@ -5,9 +5,5 @@
 
    KE4040.md
    arduino.md
-   kidsblock.md
-   mixly.md
-   python.md
-
 
 
